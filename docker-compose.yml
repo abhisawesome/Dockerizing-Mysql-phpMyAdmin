@@ -5,7 +5,7 @@ services:
         environment: 
             - MYSQL_ROOT_PASSWORD=password
         volumes: 
-            - /Users/abhi/Work/docker-db:/etc/mysql/conf.d
+            - /Users/abhi/Work/docker-db:/var/lib/mysql
     my-phpmyadmin:
         image: phpmyadmin/phpmyadmin:latest
         links: 
