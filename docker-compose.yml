@@ -1,0 +1,15 @@
+version: '3.1'
+services:
+    my-mysql:
+        image: mysql:8.0.1
+        environment: 
+            - MYSQL_ROOT_PASSWORD=password
+        volumes: 
+            - /Users/abhi/Work/docker-db:/etc/mysql/conf.d
+    my-phpmyadmin:
+        image: phpmyadmin/phpmyadmin:latest
+        links: 
+            - 'my-mysql:db'
+        ports: 
+            - '8081:80'
+
