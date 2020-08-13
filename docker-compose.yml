@@ -6,6 +6,8 @@ services:
             - MYSQL_ROOT_PASSWORD=password
         volumes: 
             - /Users/abhi/Work/docker-db:/var/lib/mysql
+        ports: 
+            - '3306:3306'
     my-phpmyadmin:
         image: phpmyadmin/phpmyadmin:latest
         links: 
